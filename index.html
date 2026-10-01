@@ -1,0 +1,1018 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Website Ngopi Lagi</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+
+    <style>
+      /* =========================
+         WARNA UTAMA WEBSITE
+      ========================= */
+
+      :root {
+        --coffee-dark: #3e2723;
+        --coffee: #6f4e37;
+        --coffee-light: #8b6f47;
+        --caramel: #c08b5c;
+        --cream: #f8f1e7;
+        --cream-dark: #eee1d0;
+        --white: #ffffff;
+        --text-dark: #3d302b;
+        --text-muted: #74665f;
+      }
+
+      /* =========================
+         DASAR
+      ========================= */
+
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 90px;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: var(--cream);
+        color: var(--text-dark);
+      }
+
+      section {
+        scroll-margin-top: 90px;
+      }
+
+      /* =========================
+         NAVBAR
+      ========================= */
+
+      .navbar {
+        background-color: var(--coffee-dark) !important;
+        box-shadow: 0 3px 15px rgba(62, 39, 35, 0.25);
+      }
+
+      .navbar-brand {
+        color: #fff !important;
+        font-weight: 700;
+        font-size: 1.25rem;
+      }
+
+      .navbar-brand i {
+        color: #d9a066;
+      }
+
+      .navbar .nav-link {
+        color: rgba(255, 255, 255, 0.8) !important;
+        margin-left: 10px;
+        transition: 0.3s;
+      }
+
+      .navbar .nav-link:hover {
+        color: #e0ad78 !important;
+      }
+
+      .navbar .nav-link.active {
+        color: #e0ad78 !important;
+      }
+
+      /* =========================
+         HERO
+      ========================= */
+
+      .hero {
+        margin-top: 72px;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        background:
+          linear-gradient(
+            135deg,
+            #f5e9d8 0%,
+            #ead6bc 100%
+          ) !important;
+        color: var(--text-dark) !important;
+      }
+
+      .hero h1 {
+        color: var(--coffee-dark);
+        font-weight: 800;
+        font-size: clamp(2.2rem, 5vw, 4rem);
+        line-height: 1.1;
+      }
+
+      .hero p {
+        color: var(--text-muted);
+        line-height: 1.8;
+      }
+
+      .hero img {
+        border: 8px solid rgba(255, 255, 255, 0.7);
+        box-shadow: 0 15px 35px rgba(62, 39, 35, 0.2);
+      }
+
+      /* =========================
+         TOMBOL
+      ========================= */
+
+      .btn-coffee {
+        background-color: var(--coffee);
+        color: white;
+        border: 2px solid var(--coffee);
+      }
+
+      .btn-coffee:hover {
+        background-color: var(--coffee-dark);
+        border-color: var(--coffee-dark);
+        color: white;
+      }
+
+      .btn-outline-coffee {
+        color: var(--coffee);
+        border: 2px solid var(--coffee);
+        background-color: transparent;
+      }
+
+      .btn-outline-coffee:hover {
+        color: white;
+        background-color: var(--coffee);
+        border-color: var(--coffee);
+      }
+
+      /* =========================
+         TENTANG KAMI
+      ========================= */
+
+      .about {
+        background-color: #fffaf4;
+      }
+
+      .about h4 {
+        color: var(--caramel);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      .about h2 {
+        color: var(--coffee-dark) !important;
+      }
+
+      .about p {
+        color: var(--text-muted);
+        line-height: 1.9;
+      }
+
+      /* =========================
+         MENU
+      ========================= */
+
+      #menu {
+        background:
+          linear-gradient(
+            180deg,
+            #f1e2d0 0%,
+            #f8efe5 100%
+          ) !important;
+
+        color: var(--text-dark) !important;
+      }
+
+      #menu h4 {
+        color: var(--caramel);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      #menu h2 {
+        color: var(--coffee-dark) !important;
+      }
+
+      /* =========================
+         CARD MENU
+      ========================= */
+
+      .card {
+        border: none;
+        border-radius: 18px;
+        overflow: hidden;
+        background-color: white;
+        box-shadow: 0 8px 25px rgba(62, 39, 35, 0.1);
+        transition: 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 35px rgba(62, 39, 35, 0.18);
+      }
+
+      .card-img-top {
+        height: 250px;
+        object-fit: cover;
+      }
+
+      .card-body {
+        padding: 24px;
+      }
+
+      .card-title {
+        color: var(--coffee-dark);
+        font-weight: 700;
+      }
+
+      .card-body span {
+        color: var(--coffee);
+      }
+
+      .card-text {
+        color: var(--text-muted);
+        line-height: 1.7;
+      }
+
+      .card .btn-primary {
+        background-color: var(--coffee);
+        border-color: var(--coffee);
+      }
+
+      .card .btn-primary:hover {
+        background-color: var(--coffee-dark);
+        border-color: var(--coffee-dark);
+      }
+
+      /* =========================
+         RESERVASI
+      ========================= */
+
+      #pesan {
+        background-color: var(--cream);
+      }
+
+      .box-reservasi {
+        border: none;
+        border-radius: 20px;
+        padding: 40px;
+        background-color: white;
+        box-shadow: 0 10px 35px rgba(62, 39, 35, 0.12);
+      }
+
+      .box-reservasi h2 {
+        color: var(--coffee-dark);
+      }
+
+      .box-reservasi h3 {
+        color: var(--caramel) !important;
+      }
+
+      .box-reservasi p {
+        color: var(--text-muted) !important;
+      }
+
+      .form-label {
+        color: var(--coffee-dark);
+        font-weight: 600;
+      }
+
+      .form-control {
+        border: 1px solid #d9c7b5;
+        border-radius: 10px;
+        padding: 12px 15px;
+      }
+
+      .form-control:focus {
+        border-color: var(--coffee);
+        box-shadow: 0 0 0 0.2rem rgba(111, 78, 55, 0.15);
+      }
+
+      .box-reservasi .btn-dark {
+        background-color: var(--coffee-dark);
+        border-color: var(--coffee-dark);
+        border-radius: 10px;
+      }
+
+      .box-reservasi .btn-dark:hover {
+        background-color: #241512;
+        border-color: #241512;
+      }
+
+      /* =========================
+         LOKASI
+      ========================= */
+
+      .location-section {
+        background-color: var(--coffee-dark) !important;
+        color: white !important;
+      }
+
+      .location-section h3 {
+        color: white;
+      }
+
+      .location-section h3 i {
+        color: #d9a066 !important;
+      }
+
+      .location-section h5 {
+        color: #e0ad78 !important;
+      }
+
+      .location-section p {
+        color: rgba(255, 255, 255, 0.7) !important;
+        line-height: 1.7;
+      }
+
+      .location-section a {
+        color: rgba(255, 255, 255, 0.7) !important;
+      }
+
+      .location-section a:hover {
+        color: #e0ad78 !important;
+      }
+
+      .location-section iframe {
+        border: 5px solid rgba(255, 255, 255, 0.1) !important;
+      }
+
+      /* =========================
+         FOOTER
+      ========================= */
+
+      footer {
+        background-color: #241512;
+      }
+
+      footer div {
+        color: rgba(255, 255, 255, 0.7) !important;
+      }
+
+      /* =========================
+         RESPONSIVE
+      ========================= */
+
+      @media (max-width: 768px) {
+        .hero {
+          margin-top: 65px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+        }
+
+        .hero h1 {
+          font-size: 2.3rem;
+        }
+
+        .hero img {
+          margin-top: 20px;
+        }
+
+        .box-reservasi {
+          padding: 25px 20px;
+        }
+
+        .card-img-top {
+          height: 220px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ==================== NAVBAR ==================== -->
+    <nav
+      class="navbar navbar-expand-lg py-3 fixed-top"
+      data-bs-theme="dark"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="#home">
+          <i class="bi bi-cup-hot-fill"></i>
+          Ngopi Lagi
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#menu">Menu</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#pesan">Reservasi</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#kami">Tentang Kami</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ==================== HERO ==================== -->
+    <section
+      id="home"
+      class="hero p-3 mb-2"
+    >
+      <div class="container py-3">
+        <div class="row g-4 align-items-center">
+
+          <div class="col-md-6">
+            <h1>
+              Selalu ada alasan untuk
+              <span style="color: #a66a3f;">ngopi lagi.</span>
+            </h1>
+
+            <p class="mt-4">
+              Di sini, kopi bukan sekadar pendorong energi di pagi hari,
+              tetapi juga alasan untuk rehat, bertegur sapa, dan merayakan
+              momen-momen kecil. Dari biji kopi pilihan yang diseduh penuh
+              presisi hingga suasana hangat yang bikin kamu betah, kami
+              menghadirkan cita rasa yang selalu bikin kamu rindu.
+            </p>
+
+            <div class="mt-4">
+              <a href="#pesan" class="btn btn-coffee me-2">
+                <i class="bi bi-calendar-check me-1"></i>
+                Pesan Meja
+              </a>
+
+              <a href="#menu" class="btn btn-outline-coffee">
+                <i class="bi bi-cup-hot me-1"></i>
+                Lihat Menu
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <img
+              src="foto.avif"
+              alt="Suasana Ngopi Lagi"
+              class="w-100 rounded-4"
+            />
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TENTANG KAMI ==================== -->
+    <section id="kami" class="about py-5">
+      <div class="container py-5">
+
+        <div class="text-center mb-5">
+          <h4 class="fw-bold">Tentang Kami</h4>
+
+          <h2 class="fw-bold">
+            Lebih dari Sekadar Kopi,<br />
+            Ini Adalah Kebiasaan
+          </h2>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 text-center">
+
+            <p>
+              Berawal dari kecintaan mendalam terhadap aroma kopi segar dan
+              obrolan hangat yang tak berujung, Ngopilagi lahir sebagai rumah
+              kedua bagi kamu. Kami percaya bahwa secangkir kopi bukan sekadar
+              minuman penyemangat pagi, melainkan medium untuk merajut
+              kebersamaan, memicu ide kreatif, atau sekadar menikmati waktu
+              sendiri.
+            </p>
+
+            <p>
+              Dari biji kopi lokal pilihan hingga proses seduh yang penuh
+              ketelitian, kami hadir untuk menyajikan kualitas terbaik di
+              setiap tegukan. Kapan pun harimu berjalan, selalu ada ruang
+              untuk Ngopilagi.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== MENU ==================== -->
+    <section id="menu" class="py-5">
+
+      <div class="container py-4">
+
+        <div class="text-center mb-5">
+          <h4 class="fw-bold">Pilihan Rekomendasi</h4>
+
+          <h2 class="fw-bold">
+            Menu Favorit Ngopilagi
+          </h2>
+        </div>
+
+        <!-- BARIS 1 -->
+        <div class="row g-4 mb-4">
+
+          <!-- Kopi Susu -->
+          <div class="col-md-4">
+            <div class="card h-100">
+
+              <img
+                src="susu.jpg"
+                class="card-img-top"
+                alt="Kopi Susu Ngopilagi"
+              />
+
+              <div class="card-body d-flex flex-column">
+
+                <div class="d-flex justify-content-between gap-2">
+                  <h5 class="card-title">
+                    Kopi Susu Ngopilagi
+                  </h5>
+
+                  <span class="fw-bold text-nowrap">
+                    Rp. 24.000
+                  </span>
+                </div>
+
+                <p class="card-text">
+                  Menu wajib yang menjadi identitas kedai. Perpaduan espresso
+                  blend khusus, susu segar pilihan, dan manisnya gula aren
+                  murni yang creamy di mulut.
+                </p>
+
+                <a href="#pesan" class="btn btn-primary mt-auto">
+                  Pesan Sekarang
+                </a>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Manual Brew -->
+          <div class="col-md-4">
+            <div class="card h-100">
+
+              <img
+                src="manual.jpg"
+                class="card-img-top"
+                alt="Manual Brew V60"
+              />
+
+              <div class="card-body d-flex flex-column">
+
+                <div class="d-flex justify-content-between gap-2">
+                  <h5 class="card-title">
+                    Manual Brew V60
+                  </h5>
+
+                  <span class="fw-bold text-nowrap">
+                    Rp. 28.000
+                  </span>
+                </div>
+
+                <p class="card-text">
+                  Diseduh secara manual menggunakan metode filter coffee
+                  dengan biji kopi pilihan dari berbagai daerah di Indonesia,
+                  seperti Gayo, Toraja, atau Flores.
+                </p>
+
+                <a href="#pesan" class="btn btn-primary mt-auto">
+                  Pesan Sekarang
+                </a>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Pandan Latte -->
+          <div class="col-md-4">
+            <div class="card h-100">
+
+              <img
+                src="panndan.jpg"
+                class="card-img-top"
+                alt="Pandan Latte"
+              />
+
+              <div class="card-body d-flex flex-column">
+
+                <div class="d-flex justify-content-between gap-2">
+                  <h5 class="card-title">
+                    Pandan Latte
+                  </h5>
+
+                  <span class="fw-bold text-nowrap">
+                    Rp. 25.000
+                  </span>
+                </div>
+
+                <p class="card-text">
+                  Inovasi baru espresso dengan ekstrak daun pandan asli yang
+                  memberikan aroma harum khas Nusantara berpadu sempurna
+                  dengan gurihnya susu.
+                </p>
+
+                <a href="#pesan" class="btn btn-primary mt-auto">
+                  Pesan Sekarang
+                </a>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- BARIS 2 -->
+        <div class="row g-4">
+
+          <!-- Matcha -->
+          <div class="col-md-4">
+            <div class="card h-100">
+
+              <img
+                src="matcha.jpg"
+                class="card-img-top"
+                alt="Matcha Creamy Signature"
+              />
+
+              <div class="card-body d-flex flex-column">
+
+                <div class="d-flex justify-content-between gap-2">
+                  <h5 class="card-title">
+                    Matcha Creamy Signature
+                  </h5>
+
+                  <span class="fw-bold text-nowrap">
+                    Rp. 28.000
+                  </span>
+                </div>
+
+                <p class="card-text">
+                  Bubuk matcha Jepang berkualitas tinggi yang dikocok lembut
+                  dengan susu segar dan sedikit sentuhan manis yang pas.
+                </p>
+
+                <a href="#pesan" class="btn btn-primary mt-auto">
+                  Pesan Sekarang
+                </a>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Cinnamon Roll -->
+          <div class="col-md-4">
+            <div class="card h-100">
+
+              <img
+                src="cii.jpg"
+                class="card-img-top"
+                alt="Cinnamon Roll"
+              />
+
+              <div class="card-body d-flex flex-column">
+
+                <div class="d-flex justify-content-between gap-2">
+                  <h5 class="card-title">
+                    Cinnamon Roll
+                  </h5>
+
+                  <span class="fw-bold text-nowrap">
+                    Rp. 24.000
+                  </span>
+                </div>
+
+                <p class="card-text">
+                  Roti gulung kayu manis dengan taburan gula aren atau kayu
+                  manis dan cream cheese glaze yang manis serta meleleh
+                  di atasnya. Pasangan terbaik untuk kopimu.
+                </p>
+
+                <a href="#pesan" class="btn btn-primary mt-auto">
+                  Pesan Sekarang
+                </a>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Croissant -->
+          <div class="col-md-4">
+            <div class="card h-100">
+
+              <img
+                src="Croissant.jpg"
+                class="card-img-top"
+                alt="Croissant"
+              />
+
+              <div class="card-body d-flex flex-column">
+
+                <div class="d-flex justify-content-between gap-2">
+                  <h5 class="card-title">
+                    Croissant
+                  </h5>
+
+                  <span class="fw-bold text-nowrap">
+                    Rp. 22.000
+                  </span>
+                </div>
+
+                <p class="card-text">
+                  Croissant mentega yang renyah di luar dan lembut di dalam,
+                  diisi dengan irisan smoked beef serta lelehan keju
+                  mozzarella. Menghasilkan aroma gurih yang menggugah selera.
+                </p>
+
+                <a href="#pesan" class="btn btn-primary mt-auto">
+                  Pesan Sekarang
+                </a>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== RESERVASI ==================== -->
+    <section id="pesan" class="py-5">
+
+      <div class="container">
+
+        <div class="box-reservasi">
+
+          <div class="text-center mb-4">
+
+            <h2 class="fw-bold">
+              RESERVASI MEJA
+            </h2>
+
+            <h3 class="fw-bold fs-5">
+              Amankan Tempat Favorit Anda
+            </h3>
+
+            <p class="fs-6 mt-2">
+              Isi form berikut untuk melakukan pemesanan dengan cepat
+            </p>
+
+          </div>
+
+          <form>
+
+            <div class="row g-3 justify-content-center">
+
+              <!-- Nama -->
+              <div class="col-md-6">
+
+                <label
+                  for="inputNama"
+                  class="form-label"
+                >
+                  Nama Lengkap
+                </label>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputNama"
+                  placeholder="Masukkan nama Anda..."
+                  required
+                />
+
+              </div>
+
+              <!-- WhatsApp -->
+              <div class="col-md-6">
+
+                <label
+                  for="inputWhatsApp"
+                  class="form-label"
+                >
+                  Nomor WhatsApp
+                </label>
+
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="inputWhatsApp"
+                  placeholder="Contoh: 0882xxxxxxxx"
+                  required
+                />
+
+              </div>
+
+              <!-- Tanggal -->
+              <div class="col-md-6">
+
+                <label
+                  for="inputDateTime"
+                  class="form-label"
+                >
+                  Tanggal & Waktu
+                </label>
+
+                <input
+                  type="datetime-local"
+                  class="form-control"
+                  id="inputDateTime"
+                  required
+                />
+
+              </div>
+
+              <!-- Jumlah orang -->
+              <div class="col-md-6">
+
+                <label
+                  for="inputJumlahOrang"
+                  class="form-label"
+                >
+                  Jumlah Orang
+                </label>
+
+                <input
+                  type="number"
+                  class="form-control"
+                  id="inputJumlahOrang"
+                  min="1"
+                  placeholder="Masukkan jumlah orang..."
+                  required
+                />
+
+              </div>
+
+              <!-- Tombol -->
+              <div class="col-12 mt-4">
+
+                <button
+                  type="submit"
+                  class="btn btn-dark w-100 py-2"
+                >
+                  <i class="bi bi-check-circle me-1"></i>
+                  Konfirmasi Reservasi
+                </button>
+
+              </div>
+
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ==================== LOKASI ==================== -->
+    <section class="location-section py-5 p-3">
+
+      <div class="container">
+
+        <div class="row align-items-stretch">
+
+          <!-- Informasi -->
+          <div
+            class="col-md-4 d-flex flex-column justify-content-between mb-4 mb-md-0"
+          >
+
+            <div>
+
+              <h3 class="fw-bold mb-3">
+                <i class="bi bi-cup-hot-fill me-2"></i>
+                Ngopilagi
+              </h3>
+
+              <p>
+                Tugas numpuk? Deadline mepet? Jangan panik, tenang aja.
+                Datang ke Ngopilagi, pesen kopi favoritmu, manfaatkan Wi-Fi
+                ngebut dan tempat yang cozy. Dijamin ide-ide cemerlang bakal
+                ngopilagi (datang lagi)!
+              </p>
+
+            </div>
+
+            <div class="row text-start mt-3">
+
+              <!-- Jam -->
+              <div class="col-md-6 mb-3 mb-md-0">
+
+                <h5 class="fw-bold fs-6 mb-2">
+                  Jam Operasional
+                </h5>
+
+                <p class="mb-1 small">
+                  <i class="bi bi-clock me-1"></i>
+
+                  Senin - Jumat :
+                  <br />
+                  08.00 - 22.00 WIB
+                </p>
+
+                <p class="mb-0 small">
+                  <i class="bi bi-clock me-1"></i>
+
+                  Sabtu - Minggu :
+                  <br />
+                  08.00 - 00.00 WIB
+                </p>
+
+              </div>
+
+              <!-- Lokasi -->
+              <div class="col-md-6">
+
+                <h5 class="fw-bold fs-6 mb-2">
+                  Lokasi & Kontak
+                </h5>
+
+                <p class="mb-1 small">
+
+                  <i class="bi bi-geo-alt me-1"></i>
+
+                  Jalan Balong, Mancagar, Garawangi, Kuningan Regency,
+                  West Java
+
+                </p>
+
+                <p class="mb-0 small">
+
+                  <a
+                    href="https://wa.me/62882006347951"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-decoration-none"
+                  >
+                    <i class="bi bi-telephone me-1"></i>
+                    +62 882-0063-47951
+                  </a>
+
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Google Maps -->
+          <div class="col-md-8">
+
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2027542.2166192962!2d107.08388307022045!3d-7.0041734004585985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f136c58e7f847%3A0x4b92eaa12c21525!2sCafe%20Ngopi%20Lagi!5e0!3m2!1sid!2sid!4v1790817258995!5m2!1sid!2sid"
+              style="border: 0; height: 100%; min-height: 350px"
+              class="w-100 rounded-3 shadow-sm"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              title="Lokasi Cafe Ngopi Lagi"
+            ></iframe>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+
+      <div class="text-center p-3">
+        2026 | Build By Wijakangka Lerie Atmaja
+      </div>
+
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwxHj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+  </body>
+</html>
